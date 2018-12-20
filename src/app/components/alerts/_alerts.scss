@@ -1,0 +1,70 @@
+.alerts {
+  width: 100%;
+  @include border-radius(0.5rem);
+  background-color: $primary;
+  color: $white;
+
+  .alerts-header {
+    padding: 2rem 2rem 0 2rem;
+    height: 10rem;
+    @include flex;
+
+    .alerts-info {
+      width: 50%;
+      @include flex;
+      @include align-items(baseline);
+
+      .alerts-title {
+        @include flex;
+        @include align-items(baseline);
+        margin-right: 1rem;
+        font-weight: $regular-weight;
+        text-transform: uppercase;
+        line-height: 2;
+      }
+    }
+
+    .alerts-controls {
+      width: 50%;
+      @include flex;
+      @include flex-direction(column);
+      @include justify-content(space-between);
+
+      .main-alerts-controls {
+        @include flex;
+        @include justify-content(flex-end);
+        @include align-items(baseline);
+        line-height: 2;
+
+        .controls-list {
+          margin: 0 2rem 0 0;
+          @include flex;
+          @include align-items(flex-start);
+
+          li {
+            &:not(:last-child) {
+              margin-right: 3rem;
+            }
+          }
+        }
+
+        > .button {
+          i {
+            margin-left: 1rem;
+          }
+        }
+      }
+
+      .sort-alerts-controls {
+        @include flex;
+        @include justify-content(flex-end);
+
+        .button {
+          i {
+            margin-left: 1rem;
+          }
+        }
+      }
+    }
+  }
+}

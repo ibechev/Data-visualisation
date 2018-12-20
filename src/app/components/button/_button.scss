@@ -1,0 +1,31 @@
+button.button {
+  font-weight: $regular-weight;
+  text-transform: uppercase;
+  @include border-radius(0.5rem);
+  color: $white;
+
+  &:hover {
+    cursor: pointer;
+  }
+
+  &.primary {
+    &:not(no-body) {
+      @include flex;
+      @include align-items(center);
+    }
+
+    padding: 0 1.5rem;
+    background-color: $primary;
+    border: 1px solid $primary-light;
+  }
+
+  &.primary-light {
+  }
+
+  &.no-body {
+    background-color: transparent;
+    padding: unset;
+    border: unset;
+    border-radius: unset;
+  }
+}

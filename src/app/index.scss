@@ -1,16 +1,16 @@
 @import "assets/scss/reset";
 @import "assets/scss/fonts";
 @import "assets/scss/icons";
+@import "assets/scss/mixins";
 @import "assets/scss/variables";
 @import "assets/scss/base";
 @import "components/index";
 
 .app {
   height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 1rem;
 
   .one {
     font-weight: $light-weight;
