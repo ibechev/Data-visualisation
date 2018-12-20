@@ -53,11 +53,15 @@ class App extends Component {
   render() {
     return (
       <div className="app">
+        <h1 className="one">ACTIVE CLIENTS 300</h1>
+        <h1 className="two">ACTIVE CLIENTS 400</h1>
+        <h1 className="three">ACTIVE CLIENTS 800</h1>
+        <p>Fonts and colors are set.</p>
         <svg>
           <path id="arc1" fill="none" stroke="#69a3e5" strokeWidth="45" />
           <path id="arc2" fill="none" stroke="#596169" strokeWidth="45" />
           <text x="140" y="150" className="small">
-            ACTIVE CLIENTS
+            ACTIVE CLIENTS hello
           </text>
         </svg>
       </div>

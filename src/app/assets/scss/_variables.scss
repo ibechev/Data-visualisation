@@ -4,14 +4,19 @@
 
 // primary
 $primary: #5eb792;
+$primary-light: #7dc5a7;
 
 // secondary
 $secondary: #69a3e5;
 
 // background
-$background: #f3f5f8;
+$bgc: #f3f5f8;
+
+// white
+$white: #ffffff;
 
 // gray
+$gray: #747f86;
 $dark-gray: #596169;
 $v-dark-gray: #4b545d;
 
@@ -22,3 +27,7 @@ $v-dark-gray: #4b545d;
 //
 // === Fonts ===
 //
+$body-font: "Open Sans", sans-serif;
+$light-weight: 300;
+$regular-weight: 400;
+$bold-weight: 600;
