@@ -17,9 +17,10 @@ body {
 }
 
 html {
-  background-color: #4b545d;
-  color: aliceblue;
-  font: 62.5%/1.4 Arial, Verdana sans-serif;
+  background-color: $bgc;
+  color: $gray;
+  font: 62.5%/1.4 $body-font, Verdana sans-serif;
+  font-weight: $light-weight;
   scroll-behavior: smooth;
 }
 

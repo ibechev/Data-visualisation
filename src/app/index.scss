@@ -1,6 +1,7 @@
 @import "assets/scss/reset";
 @import "assets/scss/fonts";
 @import "assets/scss/icons";
+@import "assets/scss/variables";
 @import "assets/scss/base";
 @import "components/index";
 
@@ -11,12 +12,16 @@
   justify-content: center;
   align-items: center;
 
-  h1 {
-    padding: 0 1rem 1rem;
-    border-bottom: 1px solid aliceblue;
-    letter-spacing: 2px;
-    text-align: center;
-    font-weight: 400;
+  .one {
+    font-weight: $light-weight;
+  }
+
+  .two {
+    font-weight: $regular-weight;
+  }
+
+  .three {
+    font-weight: $bold-weight;
   }
 
   ul {
