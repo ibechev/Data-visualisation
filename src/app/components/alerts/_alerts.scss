@@ -9,11 +9,11 @@
 
   .alerts-header {
     padding: 2rem 2rem 1rem 2rem;
-    height: 12rem;
+    min-height: 12rem;
     @include flex;
+    @include justify-content(space-between);
 
     .alerts-info {
-      width: 50%;
       @include flex;
       @include align-items(baseline);
 
@@ -28,19 +28,18 @@
     }
 
     .alerts-controls {
-      width: 50%;
       @include flex;
       @include flex-direction(column);
       @include justify-content(space-between);
+      @include flex-grow(1);
 
       .main-alerts-controls {
         @include flex;
         @include justify-content(flex-end);
         @include align-items(baseline);
-        line-height: 2;
+        margin-bottom: 4rem;
 
         .controls-list {
-          margin: 0 2rem 0 0;
           @include flex;
           @include align-items(flex-start);
 
@@ -52,6 +51,8 @@
         }
 
         > .button {
+          margin-left: 2rem;
+
           i {
             margin-left: 1rem;
           }
@@ -67,6 +68,32 @@
             margin-left: 1rem;
           }
         }
+      }
+    }
+  }
+
+  .alerts-footer {
+    padding: 0 2rem 2rem;
+
+    .button:not(.no-body) {
+      display: block;
+      margin: 0 auto 1rem;
+      border-top-left-radius: 0;
+      border-top-right-radius: 0;
+    }
+  }
+
+  @media screen and (max-width: 640px) {
+    .alerts-header .alerts-controls .main-alerts-controls {
+      @include flex-direction(column-reverse);
+      @include align-items(flex-end);
+
+      .controls-list {
+        margin-bottom: 2rem;
+      }
+
+      > .button {
+        margin-bottom: 2rem;
       }
     }
   }

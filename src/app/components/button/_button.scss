@@ -10,12 +10,15 @@ button.button {
     cursor: pointer;
   }
 
+  &:not(no-body) {
+    line-height: 2;
+  }
+
   &.primary {
     @include flex;
     @include align-items(center);
-
-    background-color: $primary;
     border: 1px solid $primary-light;
+    background-color: $primary;
     color: $white;
 
     &:hover {
@@ -24,6 +27,22 @@ button.button {
 
     &:active {
       background-color: darken($primary, 3%);
+    }
+  }
+
+  &.primary-light {
+    @include flex;
+    @include align-items(center);
+
+    background-color: $primary-light;
+    color: $white;
+
+    &:hover {
+      background-color: lighten($primary-light, 3%);
+    }
+
+    &:active {
+      background-color: darken($primary-light, 3%);
     }
   }
 
@@ -36,7 +55,7 @@ button.button {
     color: $white;
 
     &:hover {
-      color: lighten($primary, 25%);
+      color: lighten($primary, 35%);
     }
   }
 }

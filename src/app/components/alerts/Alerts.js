@@ -64,11 +64,19 @@ class Alerts extends Component {
             </div>
           </div>
         </header>
+
         <ul className="alerts-list">
           {this.state.alerts.map((alert, i) => (
             <Alert key={i} {...alert} />
           ))}
         </ul>
+
+        <footer className="alerts-footer">
+          <Button bgc="primary-light">
+            See more <i className="fas fa-caret-down" />
+          </Button>
+          <Button noBody>View all</Button>
+        </footer>
       </section>
     );
   }

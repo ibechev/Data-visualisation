@@ -4,13 +4,10 @@
   @include flex;
   @include justify-content(space-between);
   @include align-items(baseline);
+  border-bottom: 1px solid $primary-light;
 
   &:first-child {
     border-top: 1px solid $primary-light;
-  }
-
-  &:not(:last-child) {
-    border-bottom: 1px solid $primary-light;
   }
 
   .info-wrapper {
