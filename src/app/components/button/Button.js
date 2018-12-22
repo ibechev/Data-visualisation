@@ -2,7 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 
 const Button = ({ children, noBody, bgc }) => {
-  const buttonClass = `button ${bgc} ${noBody ? "no-body" : ""}`;
+  const buttonClass = `button ${noBody ? "no-body" : bgc}`;
 
   return (
     <button type="button" className={buttonClass}>

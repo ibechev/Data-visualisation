@@ -37,6 +37,13 @@
   flex-wrap: $value;
 }
 
+@mixin flex-grow($value) {
+  -webkit-box-flex: $value;
+  -webkit-flex-grow: $value;
+  -ms-flex-positive: $value;
+  flex-grow: $value;
+}
+
 //
 // GRID
 //

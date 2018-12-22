@@ -1,31 +1,42 @@
 button.button {
+  padding: 0 1.5rem;
   font-weight: $regular-weight;
   text-transform: uppercase;
   @include border-radius(0.5rem);
-  color: $white;
+  @include transition(color 0.1s ease-in-out);
+  @include transition(background-color 0.1s ease-in-out);
 
   &:hover {
     cursor: pointer;
   }
 
   &.primary {
-    &:not(no-body) {
-      @include flex;
-      @include align-items(center);
-    }
+    @include flex;
+    @include align-items(center);
 
-    padding: 0 1.5rem;
     background-color: $primary;
     border: 1px solid $primary-light;
-  }
+    color: $white;
 
-  &.primary-light {
+    &:hover {
+      background-color: lighten($primary, 3%);
+    }
+
+    &:active {
+      background-color: darken($primary, 3%);
+    }
   }
 
   &.no-body {
+    @include transition(color 0.1s ease-in-out);
     background-color: transparent;
     padding: unset;
     border: unset;
     border-radius: unset;
+    color: $white;
+
+    &:hover {
+      color: lighten($primary, 25%);
+    }
   }
 }

@@ -1,3 +1,6 @@
+@import "alert/alert";
+@import "levelBar/levelBar";
+
 .alerts {
   width: 100%;
   @include border-radius(0.5rem);
@@ -5,8 +8,8 @@
   color: $white;
 
   .alerts-header {
-    padding: 2rem 2rem 0 2rem;
-    height: 10rem;
+    padding: 2rem 2rem 1rem 2rem;
+    height: 12rem;
     @include flex;
 
     .alerts-info {

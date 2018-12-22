@@ -11,26 +11,4 @@
   max-width: 960px;
   margin: 0 auto;
   padding: 1rem;
-
-  .one {
-    font-weight: $light-weight;
-  }
-
-  .two {
-    font-weight: $regular-weight;
-  }
-
-  .three {
-    font-weight: $bold-weight;
-  }
-
-  ul {
-    margin-top: 5rem;
-
-    li {
-      letter-spacing: 1px;
-      text-align: center;
-      color: darken(aliceblue, 10%);
-    }
-  }
 }

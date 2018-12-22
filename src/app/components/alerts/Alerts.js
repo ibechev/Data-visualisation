@@ -1,13 +1,24 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
+import { mockAlerts } from "../../utilities/mockValues";
 
 import Button from "../button/Button";
+import Alert from "./alert/Alert";
 
 class Alerts extends Component {
   constructor(props) {
     super(props);
 
-    this.state = {};
+    this.state = {
+      alerts: []
+    };
+  }
+
+  componentDidMount() {
+    this.setState(prevState => ({
+      ...prevState,
+      alerts: [...mockAlerts]
+    }));
   }
 
   render() {
@@ -54,11 +65,9 @@ class Alerts extends Component {
           </div>
         </header>
         <ul className="alerts-list">
-          <li />
-          <li />
-          <li />
-          <li />
-          <li />
+          {this.state.alerts.map((alert, i) => (
+            <Alert key={i} {...alert} />
+          ))}
         </ul>
       </section>
     );
