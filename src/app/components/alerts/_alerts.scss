@@ -1,5 +1,6 @@
 @import "alert/alert";
-@import "levelBar/levelBar";
+@import "alertsHeader/alertsHeader";
+@import "alertsFooter/alertsFooter";
 
 .alerts {
   width: 100%;
@@ -7,94 +8,16 @@
   background-color: $primary;
   color: $white;
 
-  .alerts-header {
-    padding: 2rem 2rem 1rem 2rem;
-    min-height: 12rem;
-    @include flex;
-    @include justify-content(space-between);
+  .loading {
+    text-align: center;
+    padding: 0 0 6rem;
 
-    .alerts-info {
-      @include flex;
-      @include align-items(baseline);
-
-      .alerts-title {
-        @include flex;
-        @include align-items(baseline);
-        margin-right: 1rem;
-        font-weight: $regular-weight;
-        text-transform: uppercase;
-        line-height: 2;
-      }
+    .fa-spinner {
+      font-size: 8rem;
     }
 
-    .alerts-controls {
-      @include flex;
-      @include flex-direction(column);
-      @include justify-content(space-between);
-      @include flex-grow(1);
-
-      .main-alerts-controls {
-        @include flex;
-        @include justify-content(flex-end);
-        @include align-items(baseline);
-        margin-bottom: 4rem;
-
-        .controls-list {
-          @include flex;
-          @include align-items(flex-start);
-
-          li {
-            &:not(:last-child) {
-              margin-right: 3rem;
-            }
-          }
-        }
-
-        > .button {
-          margin-left: 2rem;
-
-          i {
-            margin-left: 1rem;
-          }
-        }
-      }
-
-      .sort-alerts-controls {
-        @include flex;
-        @include justify-content(flex-end);
-
-        .button {
-          i {
-            margin-left: 1rem;
-          }
-        }
-      }
-    }
-  }
-
-  .alerts-footer {
-    padding: 0 2rem 2rem;
-
-    .button:not(.no-body) {
-      display: block;
-      margin: 0 auto 1rem;
-      border-top-left-radius: 0;
-      border-top-right-radius: 0;
-    }
-  }
-
-  @media screen and (max-width: 640px) {
-    .alerts-header .alerts-controls .main-alerts-controls {
-      @include flex-direction(column-reverse);
-      @include align-items(flex-end);
-
-      .controls-list {
-        margin-bottom: 2rem;
-      }
-
-      > .button {
-        margin-bottom: 2rem;
-      }
+    p {
+      margin-top: 2rem;
     }
   }
 }

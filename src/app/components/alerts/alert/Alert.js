@@ -1,8 +1,8 @@
-import React, { Component } from "react";
+import React from "react";
 import PropTypes from "prop-types";
 import { formatDate } from "../../../utilities/formatDate";
 
-import LevelBar from "../levelBar/LevelBar";
+import LevelBar from "../../levelBar/LevelBar";
 
 const Alert = ({ name, event, eventDate, importance }) => {
   return (
@@ -24,6 +24,13 @@ const Alert = ({ name, event, eventDate, importance }) => {
       </div>
     </li>
   );
+};
+
+Alert.propTypes = {
+  name: PropTypes.string.isRequired,
+  event: PropTypes.string.isRequired,
+  eventDate: PropTypes.string.isRequired,
+  importance: PropTypes.string.isRequired
 };
 
 export default Alert;

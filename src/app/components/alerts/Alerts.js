@@ -1,82 +1,92 @@
-import React, { Component } from "react";
-import PropTypes from "prop-types";
-import { mockAlerts } from "../../utilities/mockValues";
+import React, { Component, Fragment } from "react";
+import { mockFetch } from "../../utilities/mockApi";
 
 import Button from "../button/Button";
 import Alert from "./alert/Alert";
+import AlertsHeader from "./alertsHeader/AlertsHeader";
+import AlertsFooter from "./alertsFooter/AlertsFooter";
 
 class Alerts extends Component {
   constructor(props) {
     super(props);
 
+    this.fetchData = this.fetchData.bind(this);
+    this.handleButtonClick = this.handleButtonClick.bind(this);
+
     this.state = {
-      alerts: []
+      alerts: [],
+      loading: true,
+      error: false
     };
   }
 
   componentDidMount() {
-    this.setState(prevState => ({
-      ...prevState,
-      alerts: [...mockAlerts]
-    }));
+    this.fetchData();
+  }
+
+  handleButtonClick() {
+    const { error, loading } = this.state;
+    if (!error && !loading)
+      // eslint-disable-next-line
+      console.log("Button was clicked");
+  }
+
+  async fetchData() {
+    await mockFetch()
+      .then(res => {
+        this.setState(prevState => ({
+          ...prevState,
+          alerts: [...res],
+          loading: false
+        }));
+      })
+      .catch(err => {
+        this.setState(prevState => ({
+          ...prevState,
+          error: true
+        }));
+        // eslint-disable-next-line
+        DEVELOPMENT && console.log(err);
+      });
   }
 
   render() {
+    const { alerts, loading, error } = this.state;
+
     return (
       <section className="alerts">
-        <header className="alerts-header">
-          <div className="alerts-info">
-            <h4 className="alerts-title">Alerts</h4>
-            <p className="alerts-latest">Latest alerts (41)</p>
-          </div>
-          <div className="alerts-controls">
-            <div className="main-alerts-controls">
-              <ul className="controls-list">
-                <li className="control-li">
-                  <Button noBody>
-                    <i className="fas fa-chart-pie" />
-                  </Button>
-                </li>
-                <li className="control-li">
-                  <Button noBody>
-                    <i className="fas fa-filter" />
-                  </Button>
-                </li>
-                <li className="control-li">
-                  <Button noBody>
-                    <i className="fas fa-undo-alt" />
-                  </Button>
-                </li>
-                <li className="control-li">
-                  <Button noBody>
-                    <i className="fas fa-cog" />
-                  </Button>
-                </li>
-              </ul>
-              <Button>
-                Save <i className="fas fa-caret-down" />
-              </Button>
-            </div>
-            <div className="sort-alerts-controls">
-              <Button noBody>
-                IMPORTANCE <i className="fas fa-caret-down" />
-              </Button>
-            </div>
-          </div>
-        </header>
+        <AlertsHeader
+          loading={loading}
+          latestAlerts={alerts.length}
+          handleSave={this.handleButtonClick}
+          handleImportance={this.handleButtonClick}
+          handleChart={this.handleButtonClick}
+          handleFilter={this.handleButtonClick}
+          handleUndo={this.handleButtonClick}
+          handleSettings={this.handleButtonClick}
+        />
 
-        <ul className="alerts-list">
-          {this.state.alerts.map((alert, i) => (
-            <Alert key={i} {...alert} />
-          ))}
-        </ul>
+        {error ? (
+          <p className="error">Oops, there was a problem</p>
+        ) : loading ? (
+          <div className="loading">
+            <i className="fas fa-spinner fa-spin" />
+            <p>Loading alerts ...</p>
+          </div>
+        ) : (
+          <Fragment>
+            <ul className="alerts-list">
+              {alerts.map((alert, i) => (
+                <Alert key={i} {...alert} />
+              ))}
+            </ul>
 
-        <footer className="alerts-footer">
-          <Button bgc="primary-light">
-            See more <i className="fas fa-caret-down" />
-          </Button>
-          <Button noBody>View all</Button>
-        </footer>
+            <AlertsFooter
+              handleSeeMore={this.handleButtonClick}
+              handleViewAll={this.handleButtonClick}
+            />
+          </Fragment>
+        )}
       </section>
     );
   }

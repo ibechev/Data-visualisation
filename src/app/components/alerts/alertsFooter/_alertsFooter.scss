@@ -1,0 +1,11 @@
+.alerts-footer {
+  padding: 0 2rem 2rem;
+
+  .button:not(.no-body) {
+    display: block;
+    margin: 0 auto 1rem;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    font-size: 1.4rem;
+  }
+}

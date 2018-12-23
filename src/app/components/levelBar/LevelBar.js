@@ -23,4 +23,8 @@ const LevelBar = ({ level }) => {
   );
 };
 
+LevelBar.propTypes = {
+  level: PropTypes.oneOf(["low", "middle", "very"]).isRequired
+};
+
 export default LevelBar;
