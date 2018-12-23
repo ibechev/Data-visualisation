@@ -18,7 +18,7 @@ body {
 
 html {
   background-color: $bgc;
-  color: $gray;
+  color: $white;
   font: 62.5%/1.4 $body-font, Verdana sans-serif;
   font-weight: $light-weight;
   scroll-behavior: smooth;
@@ -81,16 +81,20 @@ input[type="text"],
 input[type="time"],
 input[type="url"],
 input[type="week"] {
-  color: aliceblue;
+  color: $white;
 }
 
 button {
   font-size: 1.6rem;
 }
 
+i {
+  background-color: transparent;
+}
+
 @media screen and (max-width: 640px) {
   html {
-    font: 55%/1.4 Arial, Verdana sans-serif;
+    font: 55%/1.4 $body-font, Arial, Verdana sans-serif;
   }
 }
 

@@ -1,0 +1,61 @@
+button.button {
+  padding: 0 1.5rem;
+  font-weight: $regular-weight;
+  text-transform: uppercase;
+  @include border-radius(0.5rem);
+  @include transition(color 0.1s ease-in-out);
+  @include transition(background-color 0.1s ease-in-out);
+
+  &:hover {
+    cursor: pointer;
+  }
+
+  &:not(no-body) {
+    line-height: 2;
+  }
+
+  &.primary {
+    @include flex;
+    @include align-items(center);
+    border: 1px solid $primary-light;
+    background-color: $primary;
+    color: $white;
+
+    &:hover {
+      background-color: lighten($primary, 3%);
+    }
+
+    &:active {
+      background-color: darken($primary, 3%);
+    }
+  }
+
+  &.primary-light {
+    @include flex;
+    @include align-items(center);
+
+    background-color: $primary-light;
+    color: $white;
+
+    &:hover {
+      background-color: lighten($primary-light, 3%);
+    }
+
+    &:active {
+      background-color: darken($primary-light, 3%);
+    }
+  }
+
+  &.no-body {
+    @include transition(color 0.1s ease-in-out);
+    background-color: transparent;
+    padding: unset;
+    border: unset;
+    border-radius: unset;
+    color: $white;
+
+    &:hover {
+      color: lighten($primary, 35%);
+    }
+  }
+}

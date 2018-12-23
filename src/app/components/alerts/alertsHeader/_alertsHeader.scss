@@ -1,0 +1,102 @@
+.alerts-header {
+  padding: 2rem 2rem 1rem 2rem;
+  min-height: 12rem;
+  @include flex;
+  @include justify-content(space-between);
+
+  .alerts-info {
+    @include flex;
+    @include align-items(baseline);
+
+    .alerts-title {
+      @include flex;
+      @include align-items(baseline);
+      margin-right: 1rem;
+      font-weight: $regular-weight;
+      text-transform: uppercase;
+      line-height: 2;
+    }
+
+    .alerts-latest {
+      font-weight: $light-weight;
+    }
+  }
+
+  .alerts-controls {
+    @include flex;
+    @include flex-direction(column);
+    @include justify-content(space-between);
+    @include flex-grow(1);
+
+    .main-alerts-controls {
+      @include flex;
+      @include justify-content(flex-end);
+      @include align-items(baseline);
+      margin-bottom: 4rem;
+
+      .controls-list {
+        @include flex;
+        @include align-items(flex-start);
+
+        li {
+          &:not(:last-child) {
+            margin-right: 3.5rem;
+          }
+
+          .button {
+            font-size: 1.8rem;
+          }
+        }
+      }
+
+      > .button {
+        margin-left: 2rem;
+
+        i {
+          margin-left: 1rem;
+        }
+      }
+    }
+
+    .sort-alerts-controls {
+      @include flex;
+      @include justify-content(flex-end);
+
+      .button {
+        i {
+          margin-left: 1rem;
+        }
+      }
+    }
+  }
+
+  @media screen and (max-width: 640px) {
+    .alerts-info {
+      @include flex-direction(column);
+    }
+
+    .alerts-controls .main-alerts-controls {
+      @include flex-direction(column-reverse);
+      @include align-items(flex-end);
+      margin-bottom: 2rem;
+
+      .controls-list {
+        margin-bottom: 0;
+
+        li {
+          &:not(:last-child) {
+            margin-right: 3.5rem;
+          }
+
+          .button {
+            font-size: 2.5rem;
+          }
+        }
+      }
+
+      > .button {
+        margin-bottom: 5rem;
+      }
+    }
+  }
+}
