@@ -84,3 +84,9 @@
   -o-transition: $value;
   transition: $value;
 }
+
+@mixin transform-origin($value-one, $value-two) {
+  -webkit-transform-origin: $value-one $value-two;
+  -ms-transform-origin: $value-one $value-two;
+  transform-origin: $value-one $value-two;
+}

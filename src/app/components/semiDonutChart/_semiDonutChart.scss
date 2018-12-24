@@ -1,0 +1,64 @@
+$donut-width: 25rem;
+$donut-height: $donut-width / 2;
+$color-neutral-fill: $dark-gray;
+$color-active-fill: $secondary;
+
+.semi-donut-chart-container {
+  position: relative;
+  display: inline-block;
+
+  .donut-chart-wrapper {
+    position: relative;
+    width: $donut-width;
+    height: $donut-height;
+    margin-bottom: 1rem;
+    overflow: hidden;
+
+    .arc,
+    &::before {
+      content: "";
+      width: $donut-width;
+      height: $donut-height;
+      position: absolute;
+      @include transform-origin(50%, 0%);
+      left: 0;
+    }
+
+    &::before {
+      border: 42px solid $dark-gray;
+      border-bottom: none;
+      top: 0;
+      z-index: 1;
+      border-radius: 300px 300px 0 0;
+    }
+
+    .arc {
+      border: 42px solid $secondary;
+      border-top: none;
+      border-radius: 0 0 300px 300px;
+      top: 100%;
+      z-index: 2;
+    }
+
+    .score {
+      display: block;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      text-align: center;
+      color: $secondary;
+      font-size: 5rem;
+      line-height: 0.8;
+      font-weight: $light-weight;
+    }
+  }
+
+  .donut-chart-label {
+    display: block;
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 1.8rem;
+    letter-spacing: 0.5px;
+  }
+}

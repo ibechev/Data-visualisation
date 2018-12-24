@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import PropTypes from "prop-types";
 
 import Alerts from "./components/alerts/Alerts";
+import ClientsInfo from "./components/clientsInfo/ClientsInfo";
 
 class App extends Component {
   constructor(props) {
@@ -62,7 +63,7 @@ class App extends Component {
             ACTIVE CLIENTS hello
           </text>
         </svg> */}
-
+        <ClientsInfo />
         <Alerts />
       </div>
     );

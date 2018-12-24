@@ -1,7 +1,6 @@
 import React, { Component, Fragment } from "react";
 import { mockFetch } from "../../utilities/mockApi";
 
-import Button from "../button/Button";
 import Alert from "./alert/Alert";
 import AlertsHeader from "./alertsHeader/AlertsHeader";
 import AlertsFooter from "./alertsFooter/AlertsFooter";
