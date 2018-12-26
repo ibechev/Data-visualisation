@@ -5,6 +5,7 @@ import Button from "../../button/Button";
 
 const AlertsHeader = ({
   loading,
+  error,
   latestAlerts,
   handleSave,
   handleImportance,
@@ -17,7 +18,7 @@ const AlertsHeader = ({
     <header className="alerts-header">
       <div className="alerts-info">
         <h4 className="alerts-title">Alerts</h4>
-        {!loading && (
+        {!loading && !error && (
           <p className="alerts-latest">Latest alerts ({latestAlerts})</p>
         )}
       </div>
@@ -50,7 +51,7 @@ const AlertsHeader = ({
           </Button>
         </div>
 
-        {!loading && (
+        {!loading && !error && (
           <div className="sort-alerts-controls">
             <Button noBody onClick={handleImportance}>
               IMPORTANCE <i className="fas fa-caret-down" />
@@ -64,6 +65,7 @@ const AlertsHeader = ({
 
 AlertsHeader.propTypes = {
   loading: PropTypes.bool.isRequired,
+  error: PropTypes.bool.isRequired,
   latestAlerts: PropTypes.number,
   handleSave: PropTypes.func.isRequired,
   handleImportance: PropTypes.func.isRequired,

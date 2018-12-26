@@ -1,0 +1,56 @@
+.clients-info {
+  position: relative;
+  padding: 4rem;
+  margin-bottom: 3rem;
+  @include border-radius(0.5rem);
+  background-color: $v-dark-gray;
+
+  .clients-info-header {
+    @include flex;
+    @include justify-content(space-between);
+    margin-bottom: 2rem;
+
+    .button {
+      &:first-child {
+        color: $secondary;
+        font-weight: $bold-weight;
+
+        &:hover {
+          color: lighten($secondary, 5%);
+        }
+
+        i {
+          margin-left: 0.5rem;
+        }
+      }
+
+      &:last-child {
+        color: $gray;
+
+        &:hover {
+          color: lighten($gray, 5%);
+        }
+      }
+    }
+  }
+
+  .clients-info-charts {
+    @include flex;
+    @include justify-content(space-between);
+    @include flex-wrap(wrap);
+  }
+
+  @media screen and (max-width: 640px) {
+    .clients-info-charts {
+      @include flex-direction(column);
+      @include align-items(center);
+      @include flex-wrap(no-wrap);
+
+      > div {
+        &:not(:last-child) {
+          margin-bottom: 8rem;
+        }
+      }
+    }
+  }
+}
