@@ -1,9 +1,10 @@
 import React, { Component, Fragment } from "react";
-import { mockFetch } from "../../utilities/mockApi";
+import { mockFetchAlerts } from "../../utilities/mockApi";
 
 import Alert from "./alert/Alert";
 import AlertsHeader from "./alertsHeader/AlertsHeader";
 import AlertsFooter from "./alertsFooter/AlertsFooter";
+import LoadingSpinner from "../loadingSpinner/LoadingSpinner";
 
 class Alerts extends Component {
   constructor(props) {
@@ -31,7 +32,7 @@ class Alerts extends Component {
   }
 
   async fetchData() {
-    await mockFetch()
+    await mockFetchAlerts()
       .then(res => {
         this.setState(prevState => ({
           ...prevState,
@@ -42,10 +43,9 @@ class Alerts extends Component {
       .catch(err => {
         this.setState(prevState => ({
           ...prevState,
-          error: true
+          error: err
         }));
-        // eslint-disable-next-line
-        DEVELOPMENT && console.log(err);
+        if (DEVELOPMENT) throw new Error(err);
       });
   }
 
@@ -56,6 +56,7 @@ class Alerts extends Component {
       <section className="alerts">
         <AlertsHeader
           loading={loading}
+          error={error}
           latestAlerts={alerts.length}
           handleSave={this.handleButtonClick}
           handleImportance={this.handleButtonClick}
@@ -68,10 +69,7 @@ class Alerts extends Component {
         {error ? (
           <p className="error">Oops, there was a problem</p>
         ) : loading ? (
-          <div className="loading">
-            <i className="fas fa-spinner fa-spin" />
-            <p>Loading alerts ...</p>
-          </div>
+          <LoadingSpinner title="alerts" />
         ) : (
           <Fragment>
             <ul className="alerts-list">

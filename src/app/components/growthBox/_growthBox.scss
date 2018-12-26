@@ -1,0 +1,36 @@
+.growth-box {
+  @include flex;
+  @include flex-direction(column);
+  @include align-items(center);
+  @include justify-content(flex-end);
+
+  .growth-box-wrapper {
+    height: 9rem;
+    margin-bottom: 1rem;
+    @include flex;
+    @include flex-direction(column);
+    @include align-items(center);
+    @include justify-content(space-between);
+    text-align: center;
+
+    i {
+      color: $secondary;
+    }
+
+    .growth-number {
+      text-align: center;
+      color: $secondary;
+      font-size: 5rem;
+      line-height: 0.8;
+      font-weight: $light-weight;
+    }
+  }
+
+  .growth-box-label {
+    display: block;
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 1.8rem;
+    letter-spacing: 0.5px;
+  }
+}

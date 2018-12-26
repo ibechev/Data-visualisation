@@ -1,0 +1,45 @@
+$bar-chart-width: 18rem;
+$bar-chart-height: $bar-chart-width / 2;
+$bar-neutral-fill: $dark-gray;
+$bar-active-fill: $secondary;
+$bar-width: 4%;
+
+.bar-chart_12 {
+  @include flex;
+  @include flex-direction(column);
+  @include align-items(center);
+  @include justify-content(flex-end);
+
+  .chart-wrapper {
+    width: $bar-chart-width;
+    height: $bar-chart-height;
+    position: relative;
+    margin-bottom: 1rem;
+    @include flex;
+    @include justify-content(space-around);
+
+    .bar {
+      height: 100%;
+      width: $bar-width;
+      position: relative;
+      overflow: hidden;
+      background-color: $bar-neutral-fill;
+
+      .value {
+        width: 100%;
+        position: absolute;
+        bottom: 0;
+        @include border-radius(3px 3px 0 0);
+        background-color: $bar-active-fill;
+      }
+    }
+  }
+
+  .bar-chart-label {
+    display: block;
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 1.8rem;
+    letter-spacing: 0.5px;
+  }
+}

@@ -60,3 +60,21 @@ export const mockAlerts = [
     importance: "middle"
   }
 ];
+
+export const mockCustomerInfo = {
+  max: 270,
+  data: [
+    { month: "Dec-2017", value: 99 },
+    { month: "Jan-2018", value: 80 },
+    { month: "Feb-2018", value: 71 },
+    { month: "Mar-2018", value: 96 },
+    { month: "Apr-2018", value: 80 },
+    { month: "May-2018", value: 115 },
+    { month: "Jun-2018", value: 146 },
+    { month: "Jul-2018", value: 121 },
+    { month: "Aug-2018", value: 160 },
+    { month: "Sep-2018", value: 168 },
+    { month: "Oct-2018", value: 185 },
+    { month: "Nov-2018", value: 203 }
+  ]
+};
