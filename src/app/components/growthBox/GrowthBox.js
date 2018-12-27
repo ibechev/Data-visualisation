@@ -1,9 +1,6 @@
 import React from "react";
 
 const GrowthBox = ({ prevValue, currentValue }) => {
-  console.log("prevValue:", prevValue);
-  console.log("currentValue:", currentValue);
-
   const label =
     currentValue > prevValue
       ? "Increase"
