@@ -1,0 +1,26 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Expect <LevelBar /> to render correctly 1`] = `
+<div
+  className="level-bar-wrapper"
+>
+  <p
+    className="title"
+  >
+    low
+  </p>
+  <div
+    className="bars"
+  >
+    <span
+      className="bar low active"
+    />
+    <span
+      className="bar middle "
+    />
+    <span
+      className="bar very "
+    />
+  </div>
+</div>
+`;

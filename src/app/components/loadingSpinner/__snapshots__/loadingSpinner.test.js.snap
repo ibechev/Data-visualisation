@@ -1,0 +1,18 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Expect <LoadingSpinner /> to render correctly 1`] = `
+<div
+  className="loading-spinner"
+>
+  <i
+    className="fas fa-spinner fa-spin"
+  />
+  <p
+    className="loading-title"
+  >
+    Loading 
+    title
+     ...
+  </p>
+</div>
+`;

@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Expect <Button /> to render correectly 1`] = `
+<button
+  className="button primary"
+  onClick={[Function]}
+  type="button"
+>
+  <p>
+    Some text
+  </p>
+</button>
+`;

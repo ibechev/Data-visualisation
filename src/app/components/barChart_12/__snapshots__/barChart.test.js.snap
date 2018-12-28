@@ -1,0 +1,161 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Expect <BarChart /> to render correctly 1`] = `
+<div
+  className="bar-chart_12"
+>
+  <div
+    className="chart-wrapper"
+  >
+    <div
+      className="bar"
+    >
+      <span
+        className="value"
+        style={
+          Object {
+            "height": "36.666666666666664%",
+          }
+        }
+      />
+    </div>
+    <div
+      className="bar"
+    >
+      <span
+        className="value"
+        style={
+          Object {
+            "height": "29.629629629629626%",
+          }
+        }
+      />
+    </div>
+    <div
+      className="bar"
+    >
+      <span
+        className="value"
+        style={
+          Object {
+            "height": "26.296296296296294%",
+          }
+        }
+      />
+    </div>
+    <div
+      className="bar"
+    >
+      <span
+        className="value"
+        style={
+          Object {
+            "height": "35.55555555555556%",
+          }
+        }
+      />
+    </div>
+    <div
+      className="bar"
+    >
+      <span
+        className="value"
+        style={
+          Object {
+            "height": "29.629629629629626%",
+          }
+        }
+      />
+    </div>
+    <div
+      className="bar"
+    >
+      <span
+        className="value"
+        style={
+          Object {
+            "height": "42.592592592592595%",
+          }
+        }
+      />
+    </div>
+    <div
+      className="bar"
+    >
+      <span
+        className="value"
+        style={
+          Object {
+            "height": "54.074074074074076%",
+          }
+        }
+      />
+    </div>
+    <div
+      className="bar"
+    >
+      <span
+        className="value"
+        style={
+          Object {
+            "height": "44.81481481481481%",
+          }
+        }
+      />
+    </div>
+    <div
+      className="bar"
+    >
+      <span
+        className="value"
+        style={
+          Object {
+            "height": "59.25925925925925%",
+          }
+        }
+      />
+    </div>
+    <div
+      className="bar"
+    >
+      <span
+        className="value"
+        style={
+          Object {
+            "height": "62.22222222222222%",
+          }
+        }
+      />
+    </div>
+    <div
+      className="bar"
+    >
+      <span
+        className="value"
+        style={
+          Object {
+            "height": "68.51851851851852%",
+          }
+        }
+      />
+    </div>
+    <div
+      className="bar"
+    >
+      <span
+        className="value"
+        style={
+          Object {
+            "height": "75.18518518518519%",
+          }
+        }
+      />
+    </div>
+  </div>
+  <span
+    className="bar-chart-label"
+  >
+    Test name
+  </span>
+</div>
+`;

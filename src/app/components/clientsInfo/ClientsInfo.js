@@ -37,8 +37,10 @@ class ClientsInfo extends Component {
         this.setState(prevState => ({
           ...prevState,
           loading: false,
-          data,
-          max
+          fetchedData: {
+            data,
+            max
+          }
         }));
       })
       .catch(err => {
@@ -48,7 +50,11 @@ class ClientsInfo extends Component {
   }
 
   render() {
-    const { max, data, loading, error } = this.state;
+    const {
+      loading,
+      error,
+      fetchedData: { max, data }
+    } = this.state;
 
     return (
       <section className="clients-info">

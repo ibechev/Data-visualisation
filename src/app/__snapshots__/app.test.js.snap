@@ -39,7 +39,9 @@ exports[`Expect <App /> to render correctly 1`] = `
         <i
           className="fas fa-spinner fa-spin"
         />
-        <p>
+        <p
+          className="loading-title"
+        >
           Loading 
           information
            ...
@@ -143,7 +145,9 @@ exports[`Expect <App /> to render correctly 1`] = `
       <i
         className="fas fa-spinner fa-spin"
       />
-      <p>
+      <p
+        className="loading-title"
+      >
         Loading 
         alerts
          ...

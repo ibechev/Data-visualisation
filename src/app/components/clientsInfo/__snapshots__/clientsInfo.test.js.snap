@@ -1,0 +1,49 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Expect <ClientsInfo /> to render correctly 1`] = `
+<section
+  className="clients-info"
+>
+  <header
+    className="clients-info-header"
+  >
+    <button
+      className="button no-body"
+      onClick={[Function]}
+      type="button"
+    >
+      Clients
+      <i
+        className="fas fa-caret-right"
+      />
+    </button>
+    <button
+      className="button no-body"
+      onClick={[Function]}
+      type="button"
+    >
+      <i
+        className="fas fa-cog"
+      />
+    </button>
+  </header>
+  <div
+    className="clients-info-charts"
+  >
+    <div
+      className="loading-spinner"
+    >
+      <i
+        className="fas fa-spinner fa-spin"
+      />
+      <p
+        className="loading-title"
+      >
+        Loading 
+        information
+         ...
+      </p>
+    </div>
+  </div>
+</section>
+`;
