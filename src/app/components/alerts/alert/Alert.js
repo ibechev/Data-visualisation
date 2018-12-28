@@ -12,15 +12,17 @@ const Alert = ({ name, event, eventDate, importance }) => {
           <span className="icon">
             <i className="fas fa-birthday-cake" />
           </span>
-          <p className="name">{name}</p>
+          <p className="name">{name ? name : ""}</p>
         </div>
 
-        <p className="event">{`${name.split(" ")[0]}'s ${event} coming up`}</p>
+        <p className="event">
+          {name ? `${name.split(" ")[0]}'s ${event} coming up` : ""}
+        </p>
       </div>
 
       <div className="section-stats">
-        <p className="date">{formatDate(eventDate)}</p>
-        <LevelBar level={importance} />
+        <p className="date">{eventDate ? formatDate(eventDate) : ""}</p>
+        {importance && <LevelBar level={importance} />}
       </div>
     </li>
   );
@@ -30,7 +32,7 @@ Alert.propTypes = {
   name: PropTypes.string.isRequired,
   event: PropTypes.string.isRequired,
   eventDate: PropTypes.string.isRequired,
-  importance: PropTypes.string.isRequired
+  importance: PropTypes.oneOf(["very", "low", "middle"]).isRequired
 };
 
 export default Alert;

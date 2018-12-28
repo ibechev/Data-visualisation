@@ -24,7 +24,16 @@ const SemiDonutChart = ({ name, score, max }) => {
 SemiDonutChart.propTypes = {
   name: PropTypes.string.isRequired,
   score: PropTypes.number.isRequired,
-  max: PropTypes.number.isRequired
+  max(props, propName, component) {
+    if (!props.hasOwnProperty(propName))
+      return new Error(`Missing prop ${propName} at component ${component}.`);
+
+    if (typeof props[propName] !== "number")
+      return new Error(`Prop ${propName} must be of type number.`);
+
+    if (props[propName] < props.score)
+      return new Error(`Prop ${propName} can not be less than prop score.`);
+  }
 };
 
 export default SemiDonutChart;

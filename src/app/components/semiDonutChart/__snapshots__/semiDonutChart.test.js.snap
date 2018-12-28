@@ -1,0 +1,32 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Expect <SemiDonutChart /> to render correctly 1`] = `
+<div
+  className="semi-donut-chart-container"
+>
+  <div
+    className="donut-wrapper"
+  >
+    <div
+      className="arc"
+      style={
+        Object {
+          "WebkitTransform": "rotate(99.00000000000001deg)",
+          "msTransform": "rotate(99.00000000000001deg)",
+          "transform": "rotate(99.00000000000001deg)",
+        }
+      }
+    />
+    <span
+      className="score"
+    >
+      110
+    </span>
+  </div>
+  <span
+    className="donut-chart-label"
+  >
+    Semi donut chart
+  </span>
+</div>
+`;

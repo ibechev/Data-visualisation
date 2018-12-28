@@ -1,19 +1,21 @@
 import React from "react";
 import renderer from "react-test-renderer";
-import { propTypeErrors } from "../../tests/config/testUtils";
+import { shallow } from "enzyme";
 import App from "./App";
 
 describe("Expect <App />", () => {
-  const defaultProps = {
-    message: "Hey hey hey"
-  };
-
   it("to render correctly", () => {
-    const wrapper = renderer.create(<App {...defaultProps} />).toJSON();
+    const wrapper = renderer.create(<App />).toJSON();
     expect(wrapper).toMatchSnapshot();
   });
 
-  it("to not throw error with correct props", () => {
-    propTypeErrors(<App {...defaultProps} />, defaultProps);
+  it("to render one <ClientsInfo /> component", () => {
+    const wrapper = shallow(<App />);
+    expect(wrapper.find("ClientsInfo")).toHaveLength(1);
+  });
+
+  it("to render one <Alerts /> component", () => {
+    const wrapper = shallow(<App />);
+    expect(wrapper.find("Alerts")).toHaveLength(1);
   });
 });

@@ -43,6 +43,7 @@ class Alerts extends Component {
       .catch(err => {
         this.setState(prevState => ({
           ...prevState,
+          loading: false,
           error: err
         }));
         if (DEVELOPMENT) throw new Error(err);

@@ -4,34 +4,155 @@ exports[`Expect <App /> to render correctly 1`] = `
 <div
   className="app"
 >
-  <h1>
-    Hey hey hey
-  </h1>
-  <ul>
-    <li>
-      Express
-    </li>
-    <li>
-      React
-    </li>
-    <li>
-      Webpack
-    </li>
-    <li>
-      HMR
-    </li>
-    <li>
-      SCSS
-    </li>
-    <li>
-      Jest
-    </li>
-    <li>
-      Enzyme
-    </li>
-    <li>
-      ESLint
-    </li>
-  </ul>
+  <section
+    className="clients-info"
+  >
+    <header
+      className="clients-info-header"
+    >
+      <button
+        className="button no-body"
+        onClick={[Function]}
+        type="button"
+      >
+        Clients
+        <i
+          className="fas fa-caret-right"
+        />
+      </button>
+      <button
+        className="button no-body"
+        onClick={[Function]}
+        type="button"
+      >
+        <i
+          className="fas fa-cog"
+        />
+      </button>
+    </header>
+    <div
+      className="clients-info-charts"
+    >
+      <div
+        className="loading-spinner"
+      >
+        <i
+          className="fas fa-spinner fa-spin"
+        />
+        <p
+          className="loading-title"
+        >
+          Loading 
+          information
+           ...
+        </p>
+      </div>
+    </div>
+  </section>
+  <section
+    className="alerts"
+  >
+    <header
+      className="alerts-header"
+    >
+      <div
+        className="alerts-info"
+      >
+        <h4
+          className="alerts-title"
+        >
+          Alerts
+        </h4>
+      </div>
+      <div
+        className="alerts-controls"
+      >
+        <div
+          className="main-alerts-controls"
+        >
+          <ul
+            className="controls-list"
+          >
+            <li
+              className="control-li"
+            >
+              <button
+                className="button no-body"
+                onClick={[Function]}
+                type="button"
+              >
+                <i
+                  className="fas fa-chart-pie"
+                />
+              </button>
+            </li>
+            <li
+              className="control-li"
+            >
+              <button
+                className="button no-body"
+                onClick={[Function]}
+                type="button"
+              >
+                <i
+                  className="fas fa-filter"
+                />
+              </button>
+            </li>
+            <li
+              className="control-li"
+            >
+              <button
+                className="button no-body"
+                onClick={[Function]}
+                type="button"
+              >
+                <i
+                  className="fas fa-undo-alt"
+                />
+              </button>
+            </li>
+            <li
+              className="control-li"
+            >
+              <button
+                className="button no-body"
+                onClick={[Function]}
+                type="button"
+              >
+                <i
+                  className="fas fa-cog"
+                />
+              </button>
+            </li>
+          </ul>
+          <button
+            className="button primary"
+            onClick={[Function]}
+            type="button"
+          >
+            Save 
+            <i
+              className="fas fa-caret-down"
+            />
+          </button>
+        </div>
+      </div>
+    </header>
+    <div
+      className="loading-spinner"
+    >
+      <i
+        className="fas fa-spinner fa-spin"
+      />
+      <p
+        className="loading-title"
+      >
+        Loading 
+        alerts
+         ...
+      </p>
+    </div>
+  </section>
 </div>
 `;

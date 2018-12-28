@@ -1,0 +1,25 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Expect <GrowthBox /> to render correctly 1`] = `
+<div
+  className="growth-box"
+>
+  <div
+    className="growth-box-wrapper"
+  >
+    <i
+      className="fas fa-angle-double-up"
+    />
+    <span
+      className="growth-number"
+    >
+      50
+    </span>
+  </div>
+  <span
+    className="growth-box-label"
+  >
+    Increase
+  </span>
+</div>
+`;

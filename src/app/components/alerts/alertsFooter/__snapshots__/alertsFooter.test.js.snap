@@ -1,0 +1,25 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Expect AlertsFooter to render correctly 1`] = `
+<footer
+  className="alerts-footer"
+>
+  <button
+    className="button primary-light"
+    onClick={[Function]}
+    type="button"
+  >
+    See more 
+    <i
+      className="fas fa-caret-down"
+    />
+  </button>
+  <button
+    className="button no-body"
+    onClick={[Function]}
+    type="button"
+  >
+    View all
+  </button>
+</footer>
+`;

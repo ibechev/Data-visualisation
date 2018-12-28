@@ -1,0 +1,109 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Expect <Alerts /> to render correctly 1`] = `
+<section
+  className="alerts"
+>
+  <header
+    className="alerts-header"
+  >
+    <div
+      className="alerts-info"
+    >
+      <h4
+        className="alerts-title"
+      >
+        Alerts
+      </h4>
+    </div>
+    <div
+      className="alerts-controls"
+    >
+      <div
+        className="main-alerts-controls"
+      >
+        <ul
+          className="controls-list"
+        >
+          <li
+            className="control-li"
+          >
+            <button
+              className="button no-body"
+              onClick={[Function]}
+              type="button"
+            >
+              <i
+                className="fas fa-chart-pie"
+              />
+            </button>
+          </li>
+          <li
+            className="control-li"
+          >
+            <button
+              className="button no-body"
+              onClick={[Function]}
+              type="button"
+            >
+              <i
+                className="fas fa-filter"
+              />
+            </button>
+          </li>
+          <li
+            className="control-li"
+          >
+            <button
+              className="button no-body"
+              onClick={[Function]}
+              type="button"
+            >
+              <i
+                className="fas fa-undo-alt"
+              />
+            </button>
+          </li>
+          <li
+            className="control-li"
+          >
+            <button
+              className="button no-body"
+              onClick={[Function]}
+              type="button"
+            >
+              <i
+                className="fas fa-cog"
+              />
+            </button>
+          </li>
+        </ul>
+        <button
+          className="button primary"
+          onClick={[Function]}
+          type="button"
+        >
+          Save 
+          <i
+            className="fas fa-caret-down"
+          />
+        </button>
+      </div>
+    </div>
+  </header>
+  <div
+    className="loading-spinner"
+  >
+    <i
+      className="fas fa-spinner fa-spin"
+    />
+    <p
+      className="loading-title"
+    >
+      Loading 
+      alerts
+       ...
+    </p>
+  </div>
+</section>
+`;

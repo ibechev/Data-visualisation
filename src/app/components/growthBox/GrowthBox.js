@@ -1,9 +1,6 @@
 import React from "react";
 
 const GrowthBox = ({ prevValue, currentValue }) => {
-  console.log("prevValue:", prevValue);
-  console.log("currentValue:", currentValue);
-
   const label =
     currentValue > prevValue
       ? "Increase"
@@ -22,7 +19,6 @@ const GrowthBox = ({ prevValue, currentValue }) => {
     <div className="growth-box">
       <div className="growth-box-wrapper">
         <i className={iconClass} />
-
         <span className="growth-number">{currentValue - prevValue}</span>
       </div>
       <span className="growth-box-label">{label}</span>

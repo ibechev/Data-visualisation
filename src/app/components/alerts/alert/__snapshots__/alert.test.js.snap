@@ -1,0 +1,64 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Expect <Alert /> to render correctly 1`] = `
+<li
+  className="alert"
+>
+  <div
+    className="info-wrapper"
+  >
+    <div
+      className="section-primary"
+    >
+      <span
+        className="icon"
+      >
+        <i
+          className="fas fa-birthday-cake"
+        />
+      </span>
+      <p
+        className="name"
+      >
+        John Doe
+      </p>
+    </div>
+    <p
+      className="event"
+    >
+      John's Test event coming up
+    </p>
+  </div>
+  <div
+    className="section-stats"
+  >
+    <p
+      className="date"
+    >
+      undefined n
+    </p>
+    <div
+      className="level-bar-wrapper"
+    >
+      <p
+        className="title"
+      >
+        very
+      </p>
+      <div
+        className="bars"
+      >
+        <span
+          className="bar low active"
+        />
+        <span
+          className="bar middle active"
+        />
+        <span
+          className="bar very active"
+        />
+      </div>
+    </div>
+  </div>
+</li>
+`;
