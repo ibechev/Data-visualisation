@@ -1,10 +1,10 @@
-# react-express-webpack-boilerplate
+# data-visualization
 
-A React, Express and Webpack boilerplate.
+The following project demonstrates different data - visualization methods.
 
 ## Basic Tech Stack
 
-The boilaerplate uses **React**, **Express** and **Webpack 4**. It also includes the frameworks **Jest** and **Enzyme** for testing.
+The project uses **React**, **Express** and **Webpack 4**. It also includes the frameworks **Jest** and **Enzyme** for testing.
 
 ### Current versions
 
@@ -21,10 +21,9 @@ The boilaerplate uses **React**, **Express** and **Webpack 4**. It also includes
 ## Development environment
 
 ```sh
-git clone
- https://github.com/ibechev/react-express-webpack-boilerplate.git
+git clone https://github.com/ibechev/data-visualization.git
 
-cd react-express-webpack-boilerplate
+cd data-visualization
 
 # install all node modules in the package.jeon file
 npm install
